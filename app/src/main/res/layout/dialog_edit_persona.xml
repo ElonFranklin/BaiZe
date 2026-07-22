@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#FF9800"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="人格包名称"
+        android:layout_marginBottom="12dp"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/et_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="简介"
+        android:layout_marginBottom="12dp"
+        android:inputType="textMultiLine"
+        android:minLines="2"
+        android:gravity="top" />
+
+    <EditText
+        android:id="@+id/et_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="价格（💎 宝石）"
+        android:layout_marginBottom="12dp"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et_tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="标签（逗号分隔）"
+        android:inputType="text" />
+</LinearLayout>

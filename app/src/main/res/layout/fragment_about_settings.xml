@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1E1E1E">
+
+    <!-- 顶部标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="←"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="返回"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关于"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="32dp">
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/iv_about_logo"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/baize_avatar"
+                android:scaleType="centerCrop"
+                android:contentDescription="白泽" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="白泽"
+                android:textSize="28sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="懂你的本地 AI 伙伴，记得你，也守着你。"
+                android:textSize="14sp"
+                android:textColor="#AAAAAA"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="v0.2.0"
+                android:textSize="16sp"
+                android:textColor="#4CAF50"
+                android:layout_marginTop="16dp" />
+
+            <!-- 分隔线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#333333"
+                android:layout_marginVertical="24dp" />
+
+            <!-- 功能特性 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="• 预置灵魂人格" android:textSize="14sp" android:textColor="#AAAAAA" android:paddingBottom="6dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="• SQLite 本地记忆" android:textSize="14sp" android:textColor="#AAAAAA" android:paddingBottom="6dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="• 做梦机制（开发中）" android:textSize="14sp" android:textColor="#AAAAAA" android:paddingBottom="6dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="• Token 压缩" android:textSize="14sp" android:textColor="#AAAAAA" android:paddingBottom="6dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="• 聊天记录加密" android:textSize="14sp" android:textColor="#AAAAAA" android:paddingBottom="6dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="• 本地/云端模型推理" android:textSize="14sp" android:textColor="#AAAAAA" />
+            </LinearLayout>
+
+            <!-- 分隔线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#333333"
+                android:layout_marginVertical="8dp" />
+
+            <!-- 开源协议 -->
+            <Button
+                android:id="@+id/btn_license"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📜 开源协议 (MIT)"
+                android:backgroundTint="#607D8B"
+                android:layout_marginTop="16dp" />
+
+            <!-- 反馈 -->
+            <Button
+                android:id="@+id/btn_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="反馈与建议（邮件）"
+                android:backgroundTint="#2196F3"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

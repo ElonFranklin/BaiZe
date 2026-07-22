@@ -1,0 +1,112 @@
+# 第三方许可证声明
+
+**最后更新：** 2026-06-22
+
+本文件列出白泽（BaiZe）项目使用的所有第三方库及其许可证。
+
+## 核心依赖
+
+### Kotlin
+- **许可证**：Apache License 2.0
+- **网站**：https://kotlinlang.org/
+- **用途**：主要编程语言
+
+### Jetpack Compose
+- **许可证**：Apache License 2.0
+- **网站**：https://developer.android.com/jetpack/compose
+- **用途**：现代 UI 框架
+
+### llama.cpp
+- **许可证**：MIT License
+- **网站**：https://github.com/ggerganov/llama.cpp
+- **用途**：本地 AI 推理引擎
+
+### AndroidX Libraries
+- **许可证**：Apache License 2.0
+- **网站**：https://developer.android.com/jetpack/androidx
+- **用途**：Android 兼容库
+
+## 网络与序列化
+
+### OkHttp
+- **许可证**：Apache License 2.0
+- **网站**：https://square.github.io/okhttp/
+- **用途**：HTTP 客户端
+
+### Kotlinx Serialization
+- **许可证**：Apache License 2.0
+- **网站**：https://github.com/Kotlin/kotlinx.serialization
+- **用途**：JSON 序列化
+
+### Kotlinx Coroutines
+- **许可证**：Apache License 2.0
+- **网站**：https://github.com/Kotlin/kotlinx.coroutines
+- **用途**：异步编程
+
+## 数据存储
+
+### SQLite
+- **许可证**：Public Domain
+- **网站**：https://www.sqlite.org/
+- **用途**：本地数据库
+
+### AndroidX Room
+- **许可证**：Apache License 2.0
+- **网站**：https://developer.android.com/training/data-storage/room
+- **用途**：SQLite 抽象层
+
+## UI 与设计
+
+### Material Design
+- **许可证**：Apache License 2.0
+- **网站**：https://material.io/
+- **用途**：UI 设计规范
+
+### Coil
+- **许可证**：Apache License 2.0
+- **网站**：https://coil-kt.github.io/coil/
+- **用途**：图片加载
+
+## 开发工具
+
+### Gradle
+- **许可证**：Apache License 2.0
+- **网站**：https://gradle.org/
+- **用途**：构建工具
+
+### Android Studio
+- **许可证**：Apache License 2.0
+- **网站**：https://developer.android.com/studio
+- **用途**：开发 IDE
+
+## 语音处理
+
+### Android SpeechRecognizer
+- **许可证**：Apache License 2.0
+- **用途**：语音识别（系统 API）
+
+### Android TextToSpeech
+- **许可证**：Apache License 2.0
+- **用途**：语音合成（系统 API）
+
+## 网络通信
+
+### WebSocket
+- **许可证**：MIT License
+- **用途**：实时通信（自定义实现）
+
+## 许可证兼容性说明
+
+所有第三方库的许可证均与 MIT 许可证兼容：
+
+- **MIT License**：完全兼容
+- **Apache License 2.0**：完全兼容
+- **Public Domain**：完全兼容
+
+## 致谢
+
+感谢所有开源项目的支持和贡献！
+
+---
+
+*v1.0 — 由雪瑶整理，2026-06-22*

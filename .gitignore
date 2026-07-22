@@ -1,0 +1,85 @@
+# Build artifacts
+local.properties
+build/
+app/build/
+.gradle/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+*.log.*
+logs/
+
+# Temp files
+*.bak
+*.bak2
+*.bak3
+*.tmp
+*.pyc
+__pycache__/
+*pre-fix*
+
+# Models (too large)
+models/
+models-backup/
+
+# Database files (user specific)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Debug files
+*.hprof
+*.bin
+
+# Build outputs
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Android native build cache
+app/.cxx/
+.externalNativeBuild/
+.cxx/
+
+# Test screenshots
+test-*.png
+test/
+
+# Python scripts
+check_*.py
+
+# Shell scripts
+_fix_*.sh
+fix-*.ps1
+
+# Server
+server/node_modules/
+server/.env
+
+# Personas (user data)
+# User-local persona workspace (not app assets)
+/personas/
+keystore.properties
+*.jks
+*.keystore
+app/keystores/
+**/keystores/
+*.launch-backup
+*.release-*-backup
+.openclaw-*
+*.release-backup
+app/src/main/cpp/CMakeLists.txt.release-backup
+!app/src/main/assets/personas/
+!app/src/main/assets/personas/**
+

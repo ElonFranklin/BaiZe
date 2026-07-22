@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Baize" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">#F5F5F5</item>
+    </style>
+
+    <style name="Theme.Baize.AppCompat" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">#1E1E1E</item>
+        <item name="colorPrimary">#4CAF50</item>
+        <item name="colorPrimaryDark">#388E3C</item>
+        <item name="colorAccent">#2196F3</item>
+    </style>
+</resources>

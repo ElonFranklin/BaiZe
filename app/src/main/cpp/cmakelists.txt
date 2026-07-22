@@ -1,0 +1,54 @@
+cmake_minimum_required(VERSION 3.22.1)
+project("baize" LANGUAGES C CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Use pre-downloaded llama.cpp source to avoid network fetch during release build
+set(LLAMA_CPP_DIR "F:/Projects/baize/app/.cxx/Debug/4i39iw23/arm64-v8a/_deps/llama_cpp-src")
+
+if(NOT EXISTS "${LLAMA_CPP_DIR}/CMakeLists.txt")
+    message(FATAL_ERROR "llama.cpp source not found at ${LLAMA_CPP_DIR}")
+endif()
+
+# Build options for llama.cpp / ggml
+set(BUILD_SHARED_LIBS ON CACHE BOOL "" FORCE)
+set(GGML_CPU ON CACHE BOOL "" FORCE)
+set(GGML_CPU_AARCH64 ON CACHE BOOL "" FORCE)
+set(LLAMA_BUILD_COMMON OFF CACHE BOOL "" FORCE)
+set(LLAMA_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+set(LLAMA_BUILD_SERVER OFF CACHE BOOL "" FORCE)
+set(LLAMA_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(GGML_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(GGML_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+
+# Include llama.cpp into the build graph
+add_subdirectory(${LLAMA_CPP_DIR} ${CMAKE_CURRENT_BINARY_DIR}/llama_cpp)
+
+# Compile options
+add_compile_options(-O3 -Wall -Wextra)
+
+# JNI bridge library
+add_library(baize_jni SHARED
+    llama_jni.cpp
+)
+
+# Link llama.cpp libraries
+target_link_libraries(baize_jni
+    llama
+    ggml
+    ggml-base
+    ${CMAKE_DL_LIBS}
+    log
+)
+
+# Include llama.cpp headers
+target_include_directories(baize_jni PRIVATE
+    ${LLAMA_CPP_DIR}/include
+    ${LLAMA_CPP_DIR}/common
+    ${LLAMA_CPP_DIR}/ggml/include
+)
+
+if(ANDROID)
+    target_compile_options(baize_jni PRIVATE -fPIC)
+endif()
