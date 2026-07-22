@@ -47,9 +47,9 @@ Full review: `docs/SECURITY-REVIEW-2026-07-21-prelaunch.md`
 - [x] Mock login/register/recharge hard-fail with beta message
 - [x] No fake local gem grant on recharge
 - [x] `local.properties` untracked; keystore patterns in `.gitignore`
-- [ ] Release APK rebuild + device smoke
-- [ ] README current limits + build steps
-- [ ] GitHub `origin` + tag `v0.9.0-launch`
+- [x] Release APK rebuild + device smoke (2026-07-22)
+- [x] README current limits + build steps (2026-07-22)
+- [x] GitHub `origin` + tag `v0.9.0-launch` (https://github.com/ElonFranklin/BaiZe)
 
 ## What to test on device
 

@@ -1,5 +1,9 @@
 # BaiZe Server
 
+> **示例 / 参考服务端。**  
+> 默认 **不要** 开启公网注册与支付：保持 `FEATURE_PUBLIC_AUTH_ENABLED=false`、`FEATURE_PAYMENTS_ENABLED=false`。  
+> 本目录不是「可直接商用的完整账号/支付系统」；已知资金与鉴权风险见仓库 `docs/SECURITY-REVIEW-2026-07-21-prelaunch.md`。
+
 Phase 2 后端服务 — 认证、同步、代币、商城、成长报告。
 
 ## 快速开始
